@@ -1,0 +1,246 @@
+/* --- Variables Design "Vert, Noir & Orange" --- */
+:root {
+    /* --- Palette de Couleurs --- */
+    --bg-page: #F8F9FA;         /* Fond de page gris très clair */
+    --bg-card: #FFFFFF;         /* Fond des cartes blanc */
+    
+    --green: #25D366;           /* COULEUR DES GRANDS TITRES et BOUTONS */
+    --black: #1A1A1A;           /* COULEUR DU TEXTE GÉNÉRAL */
+    --orange: #D35400;          /* COULEUR PRIX ET DÉTAILS ACCORDÉON */
+    --gray-border: #E5E5E5;     /* Bordures subtiles */
+    
+    /* --- Arrondis --- */
+    --radius-xl: 24px; 
+    --radius-md: 16px;
+    
+    /* --- Ombres --- */
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.03);
+    
+    /* --- Polices --- */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+}
+
+/* Reset basique */
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+    background-color: var(--bg-page);
+    font-family: var(--font-body);
+    color: var(--black); /* Le texte de base est NOIR */
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container { max-width: 500px; margin: 0 auto; padding: 20px; }
+
+/* --- Header Minimaliste --- */
+.header-minimal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px 5px;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--green); /* TITRE EN VERT */
+}
+
+.whatsapp-bubble {
+    background-color: var(--bg-card);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--green); /* Icône verte */
+    font-size: 1.3rem;
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    border: 1px solid var(--gray-border);
+    transition: transform 0.2s;
+}
+.whatsapp-bubble:active { transform: scale(0.95); }
+
+/* --- Carte Produit Principale --- */
+.product-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: opacity 0.3s ease;
+    border: 1px solid var(--gray-border);
+}
+
+/* Section Image */
+.image-container {
+    position: relative;
+    width: 100%; height: auto; aspect-ratio: 4/5;
+    background-color: var(--bg-card);
+}
+.product-image { width: 100%; height: 100%; object-fit: contain; object-position: center; padding: 15px; }
+
+/* Étiquette de prix */
+.price-tag {
+    position: absolute;
+    bottom: 20px; left: 20px;
+    background-color: var(--bg-card);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700; font-size: 1rem;
+    color: var(--orange); /* PRIX EN ORANGE */
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--orange);
+}
+
+/* --- Info Produit --- */
+.product-info { padding: 30px 25px; background-color: var(--bg-card); }
+
+.product-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--green); /* TITRE EN VERT */
+}
+.accent-text { color: var(--green); }
+
+.product-description {
+    color: var(--black); /* Texte en NOIR */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.divider { height: 1px; background-color: var(--gray-border); margin: 25px 0; }
+
+/* --- Accordéon Détails (CHANGEMENTS ICI) --- */
+.details-accordion { margin-bottom: 25px; }
+details {
+    background-color: var(--bg-page);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-border);
+}
+summary {
+    padding: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--orange); /* TITRE DE L'ACCORDÉON EN ORANGE */
+    font-family: var(--font-heading);
+}
+summary::-webkit-details-marker { display: none; }
+.accordion-content {
+    padding: 0 15px 15px 15px;
+    font-size: 0.95rem;
+    color: var(--orange); /* TEXTE DU CONTENU EN ORANGE */
+    border-top: 1px solid var(--gray-border);
+}
+.specs-grid { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; padding-top: 15px; }
+.spec-label { font-weight: 700; color: var(--orange); white-space: nowrap; } /* LABELS EN ORANGE */
+.spec-value { color: var(--orange); text-align: right; } /* VALEURS EN ORANGE */
+
+/* --- Formulaire --- */
+.order-form h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--green); /* TITRE EN VERT */
+}
+.form-subtext { font-size: 0.95rem; color: var(--black); margin-bottom: 25px; }
+
+.form-group { margin-bottom: 20px; display: flex; flex-direction: column; width: 100%; }
+.form-group label {
+    font-size: 0.9rem; font-weight: 700;
+    margin-bottom: 8px; margin-left: 4px;
+    color: var(--black);
+}
+
+/* Champs de saisie */
+.form-group input {
+    width: 100%; padding: 16px;
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body); font-size: 1rem;
+    background-color: var(--bg-page);
+    color: var(--black);
+    -webkit-appearance: none;
+    transition: border-color 0.3s;
+}
+.form-group input:focus { outline: none; border-color: var(--green); background-color: var(--bg-card); }
+.form-group input::placeholder { color: #999; }
+
+.form-group small { display: block; margin-top: 6px; margin-left: 4px; font-size: 0.8rem; color: #666; }
+
+/* Bouton CTA (Reste en vert) */
+.cta-button {
+    width: 100%;
+    background-color: var(--green);
+    color: #FFF;
+    border: none;
+    padding: 18px 20px;
+    border-radius: var(--radius-xl);
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+.cta-button:active { transform: scale(0.98); }
+.cta-button:hover { background-color: #1ebc57; }
+
+.icon-circle { background-color: rgba(255,255,255,0.2); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+.form-note { text-align: center; font-size: 0.8rem; color: var(--black); margin-top: 15px; }
+
+/* --- Carrousel Interactif --- */
+.related-products { margin-bottom: 40px; }
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 20px; padding-left: 5px;
+    color: var(--green); /* TITRE EN VERT */
+}
+.products-carousel-container { overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; padding-bottom: 20px; margin: 0 -20px; padding: 0 20px 20px 20px; }
+.products-carousel-container::-webkit-scrollbar { display: none; }
+.products-carousel-track { display: flex; gap: 15px; }
+
+/* Style des cartes cliquables */
+.related-product-card {
+    flex: 0 0 160px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    scroll-snap-align: start;
+    cursor: pointer; position: relative;
+    border: 1px solid var(--gray-border);
+}
+.related-product-card:active { transform: scale(0.95); }
+
+.related-image-container {
+    width: 100%; height: 160px;
+    background-color: var(--bg-card);
+    display: flex; align-items: center; justify-content: center; padding: 10px;
+}
+.related-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; pointer-events: none; }
+
+.related-product-info { padding: 12px; text-align: center; pointer-events: none; background-color: var(--bg-card); }
+.related-product-title {
+    font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    color: var(--black);
+}
+/* Prix du carrousel */
+.related-product-price { font-size: 0.9rem; font-weight: 700; color: var(--orange); /* PRIX EN ORANGE */ }
+
+.simple-footer { text-align: center; font-size: 0.8rem; color: var(--black); padding-bottom: 20px; }

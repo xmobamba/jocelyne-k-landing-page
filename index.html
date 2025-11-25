@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jocelyne K. - Collection Exclusive</title>
+    <meta name="description" content="Lunettes de soleil de luxe. Commande rapide sur WhatsApp. Abidjan.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+    <main class="product-page">
+        <div class="container">
+            
+            <header class="header-minimal">
+                <span class="brand-name">Jocelyne K.</span>
+                <a href="https://wa.me/22508481012" class="whatsapp-bubble" aria-label="Contact WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </header>
+
+            <article class="product-card dark-card" id="mainProductCard">
+                
+                <div class="image-container dark-image-container">
+                    <img src="./images/Lunette 1.png" alt="Lunettes Miroir Rouge" class="product-image" id="mainImage">
+                    <div class="price-tag dark-price-tag" id="mainPrice">12 000 FCFA</div>
+                </div>
+
+                <section class="product-info">
+                    <h1 class="product-title" id="mainTitle">Lunettes de Soleil <br><span class="accent-text">Miroir Rouge Édition</span></h1>
+                    
+                    <p class="product-description dark-description" id="mainDescription">
+                        Une allure audacieuse avec cette monture géométrique marbrée et ses verres miroirs orangés. L'accessoire ultime pour affirmer votre style.
+                    </p>
+
+                     <div class="details-accordion dark-accordion">
+                        <details>
+                            <summary>Description Détaillée & Caractéristiques <i class="fas fa-chevron-down"></i></summary>
+                            <div class="accordion-content">
+                                <div class="specs-grid">
+                                    <div class="spec-label">Qualité :</div>
+                                    <div class="spec-value">Premium (Importé)</div>
+                                    <div class="spec-label">Protection :</div>
+                                    <div class="spec-value">UV400</div>
+                                    <div class="spec-label">Inclus :</div>
+                                    <div class="spec-value">Étui & Chiffon</div>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="divider dark-divider"></div>
+                    <section class="customer-reviews-section">
+                         <h3 class="accent-text" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 15px;">Avis Clients <span id="averageRating" style="font-size: 1rem; color: #FFB400;"></span></h3>
+                         <div class="reviews-list" id="mainReviewsList">
+                            </div>
+                    </section>
+
+
+                    <div class="divider dark-divider"></div>
+
+                    <form id="orderForm" class="order-form dark-form">
+                        <h3 class="accent-text">Réservez votre article en 30 secondes !</h3>
+                        <p class="form-subtext dark-subtext">Remplissez le formulaire et finalisez votre commande sur WhatsApp.</p>
+                        
+                        <div class="form-group">
+                            <label for="phoneNumber">Numéro de Téléphone *</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Ex: 08 48 10 12" required class="dark-input">
+                            <small class="dark-small">Le numéro utilisé sera celui pour la discussion WhatsApp.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deliveryAddress">Adresse de Livraison (Quartier/Ville) *</label>
+                            <input type="text" id="deliveryAddress" name="deliveryAddress" placeholder="Ex: Cocody, Angré 8ème tranche" required class="dark-input">
+                        </div>
+                        
+                        <button type="submit" class="cta-button accent-button">
+                            <span>Commander & Discuter sur WhatsApp</span>
+                            <div class="icon-circle"><i class="fab fa-whatsapp"></i></div>
+                        </button>
+                        <p class="form-note dark-note"><i class="fas fa-lock"></i> Vous serez immédiatement redirigé vers une discussion sécurisée.</p>
+                    </form>
+
+                </section>
+            </article>
+
+            <section class="related-products">
+                <h3 class="section-title dark-section-title">Autres modèles disponibles :</h3>
+                <div class="products-carousel-container">
+                    <div class="products-carousel-track">
+                        
+                        <div class="related-product-card dark-related-card clickable-product"
+                             data-img="./images/Lunette 1.png"
+                             data-name="Lunettes Miroir Rouge Édition"
+                             data-price="12 000 FCFA"
+                             data-desc="Une allure audacieuse avec cette monture géométrique marbrée et ses verres miroirs orangés."
+                             data-reviews='[{"name": "Aïcha K. (Cocody)", "text": "Elles sont magnifiques ! La livraison a été super rapide. Je recommande.", "rating": 5}, {"name": "Marc-André D.", "text": "Qualité top, le rendu miroir rouge est incroyable en vrai.", "rating": 5}]'>
+                            <div class="related-image-container dark-related-image-container">
+                                <img src="./images/Lunette 1.png" alt="Miroir Rouge">
+                            </div>
+                            <div class="related-product-info">
+                                <h4 class="related-product-title dark-related-title">Miroir Rouge Édition</h4>
+                                <p class="related-product-price accent-text">12 000 FCFA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="related-product-card dark-related-card clickable-product"
+                             data-img="./images/Lunette 2.png"
+                             data-name="Lunettes Carrées Noires"
+                             data-price="12 000 FCFA"
+                             data-desc="L'élégance intemporelle. Monture carrée oversize noire avec détail doré sur les branches."
+                             data-reviews='[{"name": "Sarah L.", "text": "Très classe, elles font vraiment effet de luxe.", "rating": 5}, {"name": "Kady T.", "text": "J adore la forme carrée, elles me vont super bien.", "rating": 4}]'>
+                            <div class="related-image-container dark-related-image-container">
+                                <img src="./images/Lunette 2.png" alt="Lunettes Carrées">
+                            </div>
+                            <div class="related-product-info">
+                                <h4 class="related-product-title dark-related-title">Lunettes Carrées Noires</h4>
+                                <p class="related-product-price accent-text">12 000 FCFA</p>
+                            </div>
+                        </div>
+
+                        <div class="related-product-card dark-related-card clickable-product"
+                             data-img="./images/Lunette 3.png"
+                             data-name="Lunettes Motif Écaille"
+                             data-price="12 000 FCFA"
+                             data-desc="Le charme rétro du motif écaille de tortue, sublimé par un détail doré sur les tempes."
+                             data-reviews='[{"name": "Yasmine B.", "text": "Le style vintage est parfait, très bonne qualité.", "rating": 5}, {"name": "Flora K.", "text": "Reçues ce matin, elles sont trop belles !", "rating": 5}]'>
+                            <div class="related-image-container dark-related-image-container">
+                                <img src="./images/Lunette 3.png" alt="Lunettes Écaille">
+                            </div>
+                            <div class="related-product-info">
+                                <h4 class="related-product-title dark-related-title">Lunettes Motif Écaille</h4>
+                                <p class="related-product-price accent-text">12 000 FCFA</p>
+                            </div>
+                        </div>
+
+                        <div class="related-product-card dark-related-card clickable-product"
+                             data-img="./images/Lunette 4.png"
+                             data-name="Lunettes Détail Doré"
+                             data-price="12 000 FCFA"
+                             data-desc="Faites une déclaration avec ces lunettes carrées noires ornées d'un grand détail doré et scintillant."
+                             data-reviews='[{"name": "Prisca M.", "text": "Le détail sur le côté est juste wow. Ça brille bien.", "rating": 5}, {"name": "Aminata S.", "text": "Très satisfaite, elles imposent.", "rating": 5}]'>
+                            <div class="related-image-container dark-related-image-container">
+                                <img src="./images/Lunette 4.png" alt="Lunettes Détail Doré">
+                            </div>
+                            <div class="related-product-info">
+                                <h4 class="related-product-title dark-related-title">Lunettes Détail Doré</h4>
+                                <p class="related-product-price accent-text">12 000 FCFA</p>
+                            </div>
+                        </div>
+
+                         <div class="related-product-card dark-related-card clickable-product"
+                             data-img="./images/Lunette 5.png"
+                             data-name="Lunettes Losange Bleu"
+                             data-price="12 000 FCFA"
+                             data-desc="Un design unique et léger. Monture fine dorée avec des verres bleus en forme de losange."
+                             data-reviews='[{"name": "Océane R.", "text": "Super originales, je n ai que des compliments.", "rating": 5}, {"name": "Julie P.", "text": "Très légères à porter, la couleur bleue est top.", "rating": 4}]'>
+                            <div class="related-image-container dark-related-image-container">
+                                <img src="./images/Lunette 5.png" alt="Lunettes Losange">
+                            </div>
+                            <div class="related-product-info">
+                                <h4 class="related-product-title dark-related-title">Lunettes Losange Bleu</h4>
+                                <p class="related-product-price accent-text">12 000 FCFA</p>
+                            </div>
+                        </div>
+
+                        <div class="related-product-card dark-related-card clickable-product"
+                             data-img="./images/Lunette 6.png"
+                             data-name="Lunettes Oversize (Profil)"
+                             data-price="12 000 FCFA"
+                             data-desc="Vue de profil de la magnifique monture carrée oversize, mettant en valeur le détail doré."
+                             data-reviews='[{"name": "Nathalie G.", "text": "Elles couvrent bien le visage, très star.", "rating": 5}, {"name": "Isabelle V.", "text": "Bon rapport qualité prix, livraison rapide.", "rating": 5}]'>
+                            <div class="related-image-container dark-related-image-container">
+                                <img src="./images/Lunette 6.png" alt="Lunettes Profil">
+                            </div>
+                            <div class="related-product-info">
+                                <h4 class="related-product-title dark-related-title">Lunettes Oversize (Profil)</h4>
+                                <p class="related-product-price accent-text">12 000 FCFA</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <footer class="simple-footer dark-footer">
+                <p>&copy; 2024 Jocelyne K. Collection Exclusive.</p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
